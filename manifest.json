@@ -1,0 +1,29 @@
+{
+  "android": {
+    "icons": {
+      "144": "resources/icons/icon.png",
+      "36": "resources/icons/icon.png",
+      "48": "resources/icons/icon.png",
+      "72": "resources/icons/icon.png",
+      "96": "resources/icons/icon.png"
+    },
+    "packageName": "com.weeby.viettelqrscanner",
+    "versionCode": 100
+  },
+  "appID": "495f5b100ee341668f055fb7bc9088ca",
+  "dependencies": {
+    "devkit-core": "https://github.com/gameclosure/devkit-core#v4.0.4",
+    "qrscanner": "https://github.com/tiendv89/qrscanner.git#v0.0.8"
+  },
+  "icon": "resources/icons/icon.png",
+  "shortName": "ViettelQRScanner",
+  "studio": {
+    "domain": "www.weeby.com",
+    "name": "Weeby.co",
+    "stagingDomain": "staging.weeby.com"
+  },
+  "supportedOrientations": [
+    "portrait"
+  ],
+  "title": "Viettel QR Scanner"
+}
