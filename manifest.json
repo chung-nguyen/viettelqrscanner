@@ -7,18 +7,17 @@
       "72": "resources/icons/icon.png",
       "96": "resources/icons/icon.png"
     },
-    "packageName": "com.weeby.viettelqrscanner",
     "versionCode": 100
   },
-  "appID": "495f5b100ee341668f055fb7bc9088ca",
+  "appID": "495f5b100ee341668f055fb7bc9088da",
   "dependencies": {
-    "devkit-core": "https://github.com/gameclosure/devkit-core#v4.0.4",
+    "devkit-core": "git@github.com:gameclosure/devkit-core.git#v4.0.4",
     "qrscanner": "https://github.com/tiendv89/qrscanner.git#v0.0.8"
   },
   "icon": "resources/icons/icon.png",
-  "shortName": "ViettelQRScanner",
+  "shortName": "ScannerApp",
   "studio": {
-    "domain": "www.weeby.com",
+    "domain": "studio.example.com",
     "name": "Weeby.co",
     "stagingDomain": "staging.weeby.com"
   },

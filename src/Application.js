@@ -1,9 +1,12 @@
 import device;
-import qrscanner;
 
 import ui.TextView as TextView;
 import ui.widget.ButtonView as ButtonView;
 import ui.StackView as StackView;
+
+import src.Splash as Splash;
+import src.Instructions as Instructions;
+import src.Result as Result;
 
 exports = Class(GC.Application, function () {
 
@@ -11,7 +14,7 @@ exports = Class(GC.Application, function () {
         
         var scaleRatio = device.screen.width / 640;
         
-        this.stackView = new StackView({
+        GLOBAL.stackView = new StackView({
             superview: this.view,
             x: 0,
             y: 0,
@@ -20,22 +23,29 @@ exports = Class(GC.Application, function () {
             clip: false,
             scale: scaleRatio,
         });
-
-        this.testText = new TextView({
-            superview: this.view,
+        
+        GLOBAL.splash = new Splash({
             x: 0,
-            y: 400,
-            width: 200,
-            height: 200,
-            text: 'hahaha',
-            color: 'white',
-            size: 52
+            y: 0,
+            width: stackView.style.width,
+            height: stackView.style.height,
         });
-
-        var self = this;
-        qrscanner.setOnScanResult(function (contents, format) {
-            self.testText.setText(contents.toString());
+        
+        GLOBAL.instructions = new Instructions({
+            x: 0,
+            y: 0,
+            width: stackView.style.width,
+            height: stackView.style.height,
         });
+        
+        GLOBAL.result = new Result({
+            x: 0,
+            y: 0,
+            width: stackView.style.width,
+            height: stackView.style.height,
+        });        
+      
+        stackView.push(splash);              
     };
 
     this.onQRCode = function () {
